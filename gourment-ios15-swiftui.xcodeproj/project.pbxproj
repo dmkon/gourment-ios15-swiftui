@@ -14,6 +14,9 @@
 		0E71F8FA26FCB87E002C38D5 /* gourment_ios15_swiftuiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71F8F926FCB87E002C38D5 /* gourment_ios15_swiftuiTests.swift */; };
 		0E71F90426FCB87E002C38D5 /* gourment_ios15_swiftuiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71F90326FCB87E002C38D5 /* gourment_ios15_swiftuiUITests.swift */; };
 		0E71F91226FCB8FC002C38D5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71F91126FCB8FC002C38D5 /* Utils.swift */; };
+		0E71F91526FCB9A9002C38D5 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 0E71F91426FCB9A9002C38D5 /* Realm */; };
+		0E71F91726FCB9A9002C38D5 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0E71F91626FCB9A9002C38D5 /* RealmSwift */; };
+		0E71F91A26FCB9D4002C38D5 /* GourmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71F91926FCB9D4002C38D5 /* GourmentModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,7 @@
 		0E71F8FF26FCB87E002C38D5 /* gourment-ios15-swiftuiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gourment-ios15-swiftuiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E71F90326FCB87E002C38D5 /* gourment_ios15_swiftuiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gourment_ios15_swiftuiUITests.swift; sourceTree = "<group>"; };
 		0E71F91126FCB8FC002C38D5 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		0E71F91926FCB9D4002C38D5 /* GourmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmentModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E71F91726FCB9A9002C38D5 /* RealmSwift in Frameworks */,
+				0E71F91526FCB9A9002C38D5 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +100,7 @@
 		0E71F8E726FCB87C002C38D5 /* gourment-ios15-swiftui */ = {
 			isa = PBXGroup;
 			children = (
+				0E71F91826FCB9BC002C38D5 /* Models */,
 				0E71F91026FCB8E9002C38D5 /* Utils */,
 				0E71F8E826FCB87C002C38D5 /* gourment_ios15_swiftuiApp.swift */,
 				0E71F8EA26FCB87C002C38D5 /* ContentView.swift */,
@@ -135,6 +142,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		0E71F91826FCB9BC002C38D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0E71F91926FCB9D4002C38D5 /* GourmentModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,6 +166,10 @@
 			dependencies = (
 			);
 			name = "gourment-ios15-swiftui";
+			packageProductDependencies = (
+				0E71F91426FCB9A9002C38D5 /* Realm */,
+				0E71F91626FCB9A9002C38D5 /* RealmSwift */,
+			);
 			productName = "gourment-ios15-swiftui";
 			productReference = 0E71F8E526FCB87C002C38D5 /* gourment-ios15-swiftui.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +242,9 @@
 				Base,
 			);
 			mainGroup = 0E71F8DC26FCB87C002C38D5;
+			packageReferences = (
+				0E71F91326FCB9A9002C38D5 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 0E71F8E626FCB87C002C38D5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -265,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E71F91A26FCB9D4002C38D5 /* GourmentModel.swift in Sources */,
 				0E71F8EB26FCB87C002C38D5 /* ContentView.swift in Sources */,
 				0E71F8E926FCB87C002C38D5 /* gourment_ios15_swiftuiApp.swift in Sources */,
 				0E71F91226FCB8FC002C38D5 /* Utils.swift in Sources */,
@@ -435,7 +458,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,7 +488,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -615,6 +638,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0E71F91326FCB9A9002C38D5 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0E71F91426FCB9A9002C38D5 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E71F91326FCB9A9002C38D5 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		0E71F91626FCB9A9002C38D5 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E71F91326FCB9A9002C38D5 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0E71F8DD26FCB87C002C38D5 /* Project object */;
 }
