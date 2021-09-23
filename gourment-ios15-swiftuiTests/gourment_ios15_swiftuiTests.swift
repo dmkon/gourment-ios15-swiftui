@@ -10,24 +10,46 @@ import XCTest
 
 class gourment_ios15_swiftuiTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func getGourmentCollection() -> [GourmentModel] {
+            var collection: [GourmentModel] = []
+            let item1 = GourmentModel(
+                name: "AAA",
+                date: Util.stringToDate(dt: "20:00 Thu, 23 Sep 2021")
+            )
+            collection.append(item1)
+            
+            let item2 = GourmentModel(
+                name: "BBB",
+                date: Util.stringToDate(dt: "19:00 Thu, 23 Sep 2021")
+            )
+            collection.append(item2)
+            
+            let item3 = GourmentModel(
+                name: "CCC",
+                date: Util.stringToDate(dt: "18:00 Thu, 23 Sep 2021")
+            )
+            collection.append(item3)
+            
+            return collection
         }
-    }
 
+        func testSortByAlpha() throws {
+            let collection = getGourmentCollection()
+            let sut = GourmentViewModel()
+            let sortedCollection = sut.getDataByAlpha(collection: collection)
+            XCTAssertEqual(sortedCollection.count, 3)
+            XCTAssertEqual(sortedCollection[0].gourmentName, "AAA")
+            XCTAssertEqual(sortedCollection[1].gourmentName, "BBB")
+            XCTAssertEqual(sortedCollection[2].gourmentName, "CCC")
+        }
+
+        func testSortByDate() throws {
+            let collection = getGourmentCollection()
+            let sut = GourmentViewModel()
+            let sortedCollection = sut.getDataByDate(collection: collection)
+            XCTAssertEqual(sortedCollection.count, 3)
+            XCTAssertEqual(sortedCollection[0].gourmentName, "CCC")
+            XCTAssertEqual(sortedCollection[1].gourmentName, "BBB")
+            XCTAssertEqual(sortedCollection[2].gourmentName, "AAA")
+        }
 }
