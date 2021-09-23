@@ -13,6 +13,7 @@
 		0E71F8F026FCB87E002C38D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E71F8EF26FCB87E002C38D5 /* Preview Assets.xcassets */; };
 		0E71F8FA26FCB87E002C38D5 /* gourment_ios15_swiftuiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71F8F926FCB87E002C38D5 /* gourment_ios15_swiftuiTests.swift */; };
 		0E71F90426FCB87E002C38D5 /* gourment_ios15_swiftuiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71F90326FCB87E002C38D5 /* gourment_ios15_swiftuiUITests.swift */; };
+		0E71F91226FCB8FC002C38D5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71F91126FCB8FC002C38D5 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		0E71F8F926FCB87E002C38D5 /* gourment_ios15_swiftuiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gourment_ios15_swiftuiTests.swift; sourceTree = "<group>"; };
 		0E71F8FF26FCB87E002C38D5 /* gourment-ios15-swiftuiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gourment-ios15-swiftuiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E71F90326FCB87E002C38D5 /* gourment_ios15_swiftuiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gourment_ios15_swiftuiUITests.swift; sourceTree = "<group>"; };
+		0E71F91126FCB8FC002C38D5 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		0E71F8E726FCB87C002C38D5 /* gourment-ios15-swiftui */ = {
 			isa = PBXGroup;
 			children = (
+				0E71F91026FCB8E9002C38D5 /* Utils */,
 				0E71F8E826FCB87C002C38D5 /* gourment_ios15_swiftuiApp.swift */,
 				0E71F8EA26FCB87C002C38D5 /* ContentView.swift */,
 				0E71F8EC26FCB87E002C38D5 /* Assets.xcassets */,
@@ -122,6 +125,14 @@
 				0E71F90326FCB87E002C38D5 /* gourment_ios15_swiftuiUITests.swift */,
 			);
 			path = "gourment-ios15-swiftuiUITests";
+			sourceTree = "<group>";
+		};
+		0E71F91026FCB8E9002C38D5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0E71F91126FCB8FC002C38D5 /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +267,7 @@
 			files = (
 				0E71F8EB26FCB87C002C38D5 /* ContentView.swift in Sources */,
 				0E71F8E926FCB87C002C38D5 /* gourment_ios15_swiftuiApp.swift in Sources */,
+				0E71F91226FCB8FC002C38D5 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
